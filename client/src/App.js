@@ -3,13 +3,13 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import Footer from './components/Footer/Footer'
-import NavBar from './components/Header/Navbar/Navbar'
+import './styles/styles.css'
 
 function App() {
   return (
     <ChakraProvider>
       <Router>
-      <NavBar/>
+      <Header/>
       <Main />
       <Footer/>
       </Router>
