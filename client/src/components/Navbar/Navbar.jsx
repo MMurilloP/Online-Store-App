@@ -22,7 +22,7 @@ import { GiShoppingCart } from "react-icons/gi";
 
 const links = [
   { linkName: "Productos", path: "/products" },
-  { linkName: "Carrito de la compra", path: "/cart" },
+  { linkName: <Icon as={GiShoppingCart} boxSize={7} />, path: "/cart" },
 ];
 
 const NavLink = ({ path, children }) => (
