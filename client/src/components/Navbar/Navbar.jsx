@@ -1,4 +1,6 @@
 import React from "react";
+import uuid from 'react-uuid';
+import '../../styles/Navbar.css'
 import {
   Box,
   Flex,
@@ -43,7 +45,7 @@ const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box bg={useColorModeValue("orange.100", "orange.900")} px={4}>
+    <Box className="Box-container"  px={4}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <IconButton
           size="md"
@@ -68,7 +70,7 @@ const Navbar = () => {
           </Link>
           <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
             {links.map((link) => (
-              <NavLink key={link.linkName} path={link.path}>
+              <NavLink key={uuid()} path={link.path}>
                 {link.linkName}
               </NavLink>
             ))}
@@ -82,7 +84,7 @@ const Navbar = () => {
               onClick={() => toggleColorMode()}
             />
           </NavLink>
-          <Button
+          {/* <Button
             as={ReactLink}
             to="/login"
             p={2}
@@ -104,20 +106,20 @@ const Navbar = () => {
             color="white"
           >
             Registrate
-          </Button>
+          </Button> */}
         </Flex>
       </Flex>
       {isOpen ? (
         <Box pb={4} display={{ md: "none" }}>
           <Stack as="nav" spacing={4}>
             {links.map((link) => (
-              <NavLink key={link.linkName} path={link.path}>
+              <NavLink key={uuid()} path={link.path}>
                 {link.linkName}
               </NavLink>
             ))}
-            <NavLink key="sign up" path="/registration">
+            {/* <NavLink key={uuid()} path="/registration">
               Registrate
-            </NavLink>
+            </NavLink> */}
           </Stack>
         </Box>
       ) : null}
