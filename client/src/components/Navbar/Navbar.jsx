@@ -1,5 +1,5 @@
 import React from "react";
-import uuid from 'react-uuid';
+import { v4 as uuidv4 } from 'uuid';
 import '../../styles/Navbar.css'
 import {
   Box,
@@ -70,7 +70,7 @@ const Navbar = () => {
           </Link>
           <HStack as="nav" spacing={10} display={{ base: "none", md: "flex" }}>
             {links.map((link) => (
-              <NavLink key={uuid()} path={link.path}>
+              <NavLink key={uuidv4()} path={link.path}>
                 {link.linkName}
               </NavLink>
             ))}
@@ -113,7 +113,7 @@ const Navbar = () => {
         <Box pb={4} display={{ md: "none" }}>
           <Stack as="nav" spacing={4}>
             {links.map((link) => (
-              <NavLink key={uuid()} path={link.path}>
+              <NavLink key={uuidv4()} path={link.path}>
                 {link.linkName}
               </NavLink>
             ))}
