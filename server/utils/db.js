@@ -9,7 +9,7 @@ const db = mongoose.connection;
 
 // Eventos
 db.on("error", error => console.log(error));
-db.once("open", () => console.log("connection to MongoDB established")); 
+db.once("open", () => console.log("Conectado a MongoDB")); 
 
 
 module.exports = mongoose;
