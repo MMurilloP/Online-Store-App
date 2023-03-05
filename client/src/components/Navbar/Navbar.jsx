@@ -59,16 +59,16 @@ const Navbar = () => {
             <Flex alignItems="center">
               <Icon
                 as={BsFillEmojiSmileUpsideDownFill}
-                h={6}
-                w={6}
+                h={7}
+                w={7}
                 color="orange.400"
               />
-              <Text fontWeight="extrabold" p={5}>
+              <Text fontWeight="extrabold" p={3}>
                 Tienda Online
               </Text>
             </Flex>
           </Link>
-          <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
+          <HStack as="nav" spacing={10} display={{ base: "none", md: "flex" }}>
             {links.map((link) => (
               <NavLink key={uuid()} path={link.path}>
                 {link.linkName}
