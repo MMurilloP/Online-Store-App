@@ -1,12 +1,32 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Center, Wrap, WrapItem, Input } from '@chakra-ui/react';
-import { products } from '../../products';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from '../../redux/actions/ProductsActions';
+import { useEffect } from 'react';
+
+
+
 import ProducstCard from './ProductsCard/ProducstCard';
-import ReactPaginate from 'react-paginate';
+import ReactPaginate from 'react-paginate'; 
 import '../../styles/styles.css'
 
+
 function ProductsList() {
+  const dispatch = useDispatch();
+
+  const productList = useSelector((state) => state.products);
+  // const { loading, error, products } = productList;
+  const { products } = productList;
+
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
+  
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [searchTermGlobal, setSearchTermGlobal] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
