@@ -1,6 +1,6 @@
 import React from "react";
-import { v4 as uuidv4 } from 'uuid';
-import '../../styles/Navbar.css'
+import { v4 as uuidv4 } from "uuid";
+import "../../styles/Navbar.css";
 import {
   Box,
   Flex,
@@ -10,14 +10,13 @@ import {
   Icon,
   Text,
   useDisclosure,
-  Button,
   Stack,
   useColorModeValue,
   useColorMode,
 } from "@chakra-ui/react";
 import { Link as ReactLink } from "react-router-dom";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { BsFillEmojiSmileUpsideDownFill } from "react-icons/bs";
+import { GiFruitBowl } from "react-icons/gi";
 import { GiShoppingCart } from "react-icons/gi";
 
 const links = [
@@ -45,7 +44,7 @@ const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box className="Box-container"  px={4}>
+    <Box className="Box-container" px={4}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <IconButton
           size="md"
@@ -57,14 +56,9 @@ const Navbar = () => {
         <HStack>
           <Link as={ReactLink} to="/">
             <Flex alignItems="center">
-              <Icon
-                as={BsFillEmojiSmileUpsideDownFill}
-                h={7}
-                w={7}
-                color="orange.400"
-              />
-              <Text fontWeight="extrabold" p={3}>
-                Tienda Online
+              <Icon as={GiFruitBowl} h={12} w={12} color="orange.400" />
+              <Text fontSize="2xl" pl="10" pr="10" fontWeight="extrabold">
+                Canasta de Frutas
               </Text>
             </Flex>
           </Link>

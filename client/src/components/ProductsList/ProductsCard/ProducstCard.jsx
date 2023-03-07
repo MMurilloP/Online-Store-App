@@ -32,21 +32,8 @@ function ProducstCard({ product }) {
       shadow="lg"
       position="relative"
     >
-      {/* {product.isNew && <Circle size='10px' position='absolute' top={2} right={2} bg='green.300'/>} Si hay stock circulo verde
-          {product.stock <= 0 && <Circle size='10px' position='absolute' top={2} right={2} bg='green.300'/>} si no hay stock circulo naranja */}
-      <Image src={product.image} alt={product.name} roundedTop="lg" />
-      {/* <Box flex='1' maxH='S' alignItems='baseline'>
-          {product.stock <= 0 && (
-              <Badge rounded='full' px='2' fontSize='0.8' colorScheme='red'>
-                  Sin stock
-              </Badge>
-          )}
-          {product.isNew <= 0 && (
-              <Badge rounded='full' px='2' fontSize='0.8' colorScheme='green'>
-                  Nuevo
-              </Badge>
-          )}
-        </Box> */}
+      <Image  boxSize='250px' objectFit='cover' src={product.image} alt={product.name} roundedTop="lg" />
+    
       <Flex mt="1" justifyContent="space-between" alignContent="center">
         <Link
           as={ReactLink}
@@ -97,7 +84,7 @@ function ProducstCard({ product }) {
           color={useColorModeValue("gray.800", "white")}
         >
           <Box as="span" color={"gray.600"} fontSize="lg"></Box>
-          {product.price}€
+          {product.price}€ /kg
         </Box>
         <Tooltip
           label="Add to card"
