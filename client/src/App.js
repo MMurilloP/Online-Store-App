@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import ProductList from "./components/ProductsList/ProductsList";
 import LandingPage from "./components/LandingPage/LandingPage"
+
 import "./styles/styles.css";
 
 function App() {

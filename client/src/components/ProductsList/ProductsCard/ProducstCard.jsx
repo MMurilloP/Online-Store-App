@@ -34,10 +34,10 @@ function ProducstCard({ product }) {
     >
       <Image  boxSize='250px' objectFit='cover' src={product.image} alt={product.name} roundedTop="lg" />
     
-      <Flex mt="1" justifyContent="space-between" alignContent="center">
+       <Flex mt="1" justifyContent="space-between" alignContent="center">
         <Link
           as={ReactLink}
-          to={`/product${product._id}`}
+          to={`/product/${product._id}`} /* agregar la ruta */
           pt="2"
           p={3}
           cursor="pointer"
