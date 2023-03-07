@@ -8,4 +8,5 @@ const productRouters = express.Router();
 productRouters.get('/', productController.getProducts)
 
 
+
 module.exports = productRouters
