@@ -15,8 +15,6 @@ import {
   import { Link as ReactLink } from "react-router-dom";
 
 
-
-  
 const LandingPage = () => (
     <Box  maxW="8xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }} minH='6xl'>
       <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
@@ -36,7 +34,7 @@ const LandingPage = () => (
 
               </Heading>
               <Heading size="xl" fontWeight="normal">
-                Tú tienda de fruta online
+                Tú tienda de frutas online
               </Heading>
             </Stack>
             <HStack spacing="3">
