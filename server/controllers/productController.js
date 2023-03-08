@@ -5,21 +5,16 @@ const getProducts = async (req, res) => {
   res.json(products);
 };
 
-const getProductByID = async (req, res) => {
-  const productID = req.params.id;
+const getProductById = async (req, res) => {
+  const product = await ProductModel.findById(req.params.id);
 
-  try {
-    const product = await ProductModel.findById(productID);
-
-    if (!product) {
-      return res.status(404).json({ message: "Product not found" });
-    }
-
-    res.status(200).json(product);
-  } catch (error) {
-    res.status(500).json({ message: "Server error" });
+  if (product) {
+    res.json(product);
+  } else {
+    res.status(404);
+    throw new Error('Product not found.');
   }
 };
 
 
-module.exports = { getProducts,getProductByID };
+module.exports = { getProducts,getProductById };

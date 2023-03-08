@@ -57,7 +57,7 @@ const Navbar = () => {
           <Link as={ReactLink} to="/">
             <Flex alignItems="center">
               <Icon as={GiFruitBowl} h={12} w={12} color="orange.400" />
-              <Text fontSize="2xl" pl="10" pr="10" fontWeight="extrabold">
+              <Text fontSize="xl" pl="10" pr="10" fontWeight="extrabold">
                 Canasta de Frutas
               </Text>
             </Flex>
@@ -78,29 +78,6 @@ const Navbar = () => {
               onClick={() => toggleColorMode()}
             />
           </NavLink>
-          {/* <Button
-            as={ReactLink}
-            to="/login"
-            p={2}
-            fontSize="sm"
-            fontWeight={400}
-            variant="link"
-          >
-            Login
-          </Button>
-          <Button
-            as={ReactLink}
-            to="/registration"
-            m={2}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize="sm"
-            fontWeight={600}
-            _hover={{ bg: "teal.400" }}
-            bg="teal.500"
-            color="white"
-          >
-            Registrate
-          </Button> */}
         </Flex>
       </Flex>
       {isOpen ? (
@@ -111,9 +88,6 @@ const Navbar = () => {
                 {link.linkName}
               </NavLink>
             ))}
-            {/* <NavLink key={uuid()} path="/registration">
-              Registrate
-            </NavLink> */}
           </Stack>
         </Box>
       ) : null}

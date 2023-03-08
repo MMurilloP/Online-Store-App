@@ -10,15 +10,36 @@ import {
   HStack,
   Stack,
   Link,
+  useToast,
 } from "@chakra-ui/react";
 import { TbShoppingCartPlus } from "react-icons/tb";
 import { Link as ReactLink } from "react-router-dom";
 import { StarIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {addCartItem} from '../../../redux/actions/cartActions'
 
 function ProducstCard({ product }) {
   const [rating] = useState(product.rating);
   const iconSize = "md";
+
+  const dispatch = useDispatch();
+  const toast = useToast();
+  const cartInfo = useSelector((state) => state.cart);
+  const { cart } = cartInfo;
+
+  const addItem = (id) => {
+    if (cart.some((cartItem) => cartItem.id === id)) {
+      toast({
+        description: 'El producto ya está en tu carrito',
+        status: 'error',
+        isClosable: true,
+      });
+    } else {
+      dispatch(addCartItem(id, 1));
+      toast({ description: 'Producto añadido a tu carrito.', status: 'success', isClosable: true });
+    }
+  };
 
   return (
     <Stack
@@ -34,10 +55,10 @@ function ProducstCard({ product }) {
     >
       <Image  boxSize='250px' objectFit='cover' src={product.image} alt={product.name} roundedTop="lg" />
     
-       <Flex mt="1" justifyContent="space-between" alignContent="center">
+      <Flex mt="1" justifyContent="space-between" alignContent="center">
         <Link
           as={ReactLink}
-          to={`/product/${product._id}`} /* agregar la ruta */
+          to={`/product${product._id}`}
           pt="2"
           p={3}
           cursor="pointer"
@@ -92,7 +113,7 @@ function ProducstCard({ product }) {
           placement="top"
           color="gray.800"
         >
-          <Button variant="ghost" display="flex" disabled={product.stock <= 0}>
+          <Button variant="ghost" display="flex" onClick={()=> addItem(product._id)}>
             <Icon
               as={TbShoppingCartPlus}
               mt= {7}
