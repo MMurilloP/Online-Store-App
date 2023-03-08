@@ -22,15 +22,6 @@ const Footer = () => (
         direction={{ base: "column-reverse", md: "row" }}
         align="center"
       >
-        <Stack spacing={{ base: "6", md: "8" }} align="start">
-          <Flex alignItems="center">
-            <Icon as={GiFruitBowl} h={8} w={8} color="orange.400" />
-            <Text fontSize="1xl" pl="5" fontWeight="extrabold">
-            Canasta de Frutas
-            </Text>
-          </Flex>
-        </Stack>
-
         <ButtonGroup variant="ghost">
           <IconButton
             as="a"
@@ -51,6 +42,14 @@ const Footer = () => (
             icon={<FaTwitter fontSize="1.25rem" />}
           />
         </ButtonGroup>
+        <Stack spacing={{ base: "6", md: "8" }} align="start">
+          <Flex alignItems="center">
+            <Icon as={GiFruitBowl} h={8} w={8} color="orange.400" />
+            <Text fontSize="1xl" pl="5" fontWeight="extrabold">
+            Canasta de Frutas
+            </Text>
+          </Flex>
+        </Stack>
       </Stack>
     </Container>
   </Box>

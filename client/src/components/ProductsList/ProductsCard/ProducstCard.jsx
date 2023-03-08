@@ -18,6 +18,7 @@ import { StarIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {addCartItem} from '../../../redux/actions/cartActions'
+import ProductDetails from "./ProductDetail/ProductDetail"
 
 function ProducstCard({ product }) {
   const [rating] = useState(product.rating);
@@ -68,9 +69,6 @@ function ProducstCard({ product }) {
           </Box>
         </Link>
       </Flex>
-      <Box fontSize="sm" fontWeight="semibold">
-        {product.brand}
-      </Box>
       <Flex>
         <HStack spacing="2px">
           <StarIcon size={iconSize} w="14px" color="orange.500" />
@@ -105,7 +103,7 @@ function ProducstCard({ product }) {
           color={useColorModeValue("gray.800", "white")}
         >
           <Box as="span" color={"gray.600"} fontSize="lg"></Box>
-          {product.price}€ /kg
+          {product.price}€ /kg 
         </Box>
         <Tooltip
           label="Add to card"
@@ -124,6 +122,8 @@ function ProducstCard({ product }) {
           </Button>
         </Tooltip>
       </Flex>
+      <ProductDetails product={product} />
+
     </Stack>
   );
 }
