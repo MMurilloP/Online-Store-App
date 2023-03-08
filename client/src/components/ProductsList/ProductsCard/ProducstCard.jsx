@@ -68,9 +68,6 @@ function ProducstCard({ product }) {
           </Box>
         </Link>
       </Flex>
-      <Box fontSize="sm" fontWeight="semibold">
-        {product.brand}
-      </Box>
       <Flex>
         <HStack spacing="2px">
           <StarIcon size={iconSize} w="14px" color="orange.500" />
@@ -105,7 +102,7 @@ function ProducstCard({ product }) {
           color={useColorModeValue("gray.800", "white")}
         >
           <Box as="span" color={"gray.600"} fontSize="lg"></Box>
-          {product.price}€ /kg
+          {product.price}€ /kg 
         </Box>
         <Tooltip
           label="Add to card"
