@@ -10,7 +10,7 @@ import {
     Stack,
     useColorModeValue,
   } from '@chakra-ui/react'
-  import { FaArrowRight } from 'react-icons/fa'
+  import { FaArrowLeft } from 'react-icons/fa'
   import { GiFruitBowl } from "react-icons/gi";
   import { Link as ReactLink } from "react-router-dom";
 
@@ -38,11 +38,13 @@ const LandingPage = () => (
               </Heading>
             </Stack>
             <HStack spacing="3">
+            <Link as={ReactLink} to='/products' color={useColorModeValue('orange.500', 'orange.300')} fontWeight="bold" fontSize="lg">
             <Icon as={GiFruitBowl} h={12} w={12} color="orange.400" />
+            </Link>
               <Link as={ReactLink} to='/products' color={useColorModeValue('orange.500', 'orange.300')} fontWeight="bold" fontSize="lg">
-                Entra
+                Entrar
               </Link>
-              <Icon color={useColorModeValue('orange.500', 'orange.300')} as={FaArrowRight} />
+              <Icon color={useColorModeValue('orange.500', 'orange.300')} as={FaArrowLeft} />
             </HStack>
             
           </Stack>
