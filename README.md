@@ -43,7 +43,9 @@ Si tienes alguna pregunta o comentario sobre nuestros productos, no dudes en con
         http://localhost:5001/api/products/:id
 
 ```
+# Instalar dependencias
 
+    npm i
 
 # Iniciar semilla para rellenar bd dentro de la carpeta back
 
