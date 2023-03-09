@@ -1,71 +1,68 @@
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BIENVENIDOS A LA TU TIENDA DE FRUTAS ONLINE: CANASTA DE FRUTAS Bienvenidos a Canasta de Frutas, la tienda online donde podrás encontrar la mejor selección de frutas frescas y de calidad.
 
-## Available Scripts
+![Home](./client/public/Assets/Home.png)
 
-In the project directory, you can run:
 
-### `npm start`
+# ¿Quiénes somos? 
+En Canasta de Frutas somos un equipo de apasionados por las frutas. Nos encanta seleccionar las mejores frutas de temporada para ofrecerte productos de alta calidad y frescura. Además, nos aseguramos de que nuestras frutas sean cultivadas de manera sostenible y respetuosa con el medio ambiente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# ¿Qué ofrecemos? 
+Ofrecemos una amplia variedad de frutas frescas y de temporada, desde manzanas y peras hasta kiwis y piñas. Además, también ofrecemos una selección de frutas exóticas y tropicales para aquellos que buscan algo diferente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+En Canasta de Frutas también nos preocupamos por la comodidad de nuestros clientes, por lo que ofrecemos la opción de comprar canastas de frutas preseleccionadas o personalizar tu propia canasta de frutas.
+![Home](./client/public/Assets/Productos.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#  ¿Cómo comprar? 
+Para comprar en Canasta de Frutas, simplemente selecciona los productos que deseas y agrega al carrito de compras. Una vez que hayas agregado todos los productos, procede a la página de pago y completa el proceso de pago. ¡Y listo! En pocos días tendrás tus frutas frescas y de calidad en la puerta de tu casa.
 
-### `npm run build`
+![Home](./client/public/Assets/Carrito.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# ¿Cómo contactarnos? 
+Si tienes alguna pregunta o comentario sobre nuestros productos, no dudes en contactarnos a través de los issues. Estaremos encantados de atenderte.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+¡Gracias por elegir Canasta de Frutas como tu tienda de frutas online!
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Reference
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Get all items
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```http
+  GET /api/products
+      http://localhost:5001/api/products
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+#### Get one item
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```http
+  GET /api/products/:id
+        http://localhost:5001/api/products/:id
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+# Instalar dependencias
 
-### Code Splitting
+    npm i
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Iniciar semilla para rellenar bd dentro de la carpeta back
 
-### Analyzing the Bundle Size
+    node seed/seed.js  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Iniciar servidor dentro de la carpeta back
 
-### Making a Progressive Web App
+    npm run server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Iniciar cliente/React dentro de la carpeta client
 
-### Advanced Configuration
+    npm start
+    http://localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+# Arrancar back y front 
+    npm run app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
