@@ -1,4 +1,5 @@
 
+
 # BIENVENIDOS A LA TU TIENDA DE FRUTAS ONLINE: CANASTA DE FRUTAS Bienvenidos a Canasta de Frutas, la tienda online donde podrás encontrar la mejor selección de frutas frescas y de calidad.
 
 ![Home](./client/public/Assets/Home.png)
