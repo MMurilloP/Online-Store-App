@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import "../../styles/Navbar.css";
+import "../../styles/componets/NavBar.css"
 import {
   Box,
   Flex,
