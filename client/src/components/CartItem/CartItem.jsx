@@ -4,6 +4,7 @@ import { addCartItem, removeCartItem } from '../../redux/actions/cartActions';
 import { v4 as uuidv4 } from "uuid";
 
 
+
 const CartItem = ({ cartItem }) => {
   const { name, image, price, qty, id } = cartItem;
   const dispatch = useDispatch();
