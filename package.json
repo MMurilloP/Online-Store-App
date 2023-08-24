@@ -7,9 +7,9 @@
     "generate-docs": "jsdoc -c /path/to/my/conf.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm run start --prefix client",
-    "server": "node index.js",
+    "server": "node server/index.js",
     "app": "concurrently npm \"npm run server\" \"npm run client\"",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "build": "npm run generate-docs && npm run test && npm run app"
   },
   "repository": {
     "type": "git",
