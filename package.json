@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm run start --prefix client",
     "server": "node server/index.js",
-    "app": "concurrently npm \"npm run server\" \"npm run client\""
+    "app": "concurrently npm \"npm run server\" \"npm run client\"",
+    "build": "npm run generate-docs && npm run test && npm run app"
   },
   "repository": {
     "type": "git",
