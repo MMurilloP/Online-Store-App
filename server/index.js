@@ -13,14 +13,7 @@ app.use("/api/products", productRouters);
 
 const port = process.env.PORT || 8001;
 
-// Deploy
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
 
 app.listen(port, () =>
   console.log(`Servidor corriendo en ${port} http://localhost:${port}`)
