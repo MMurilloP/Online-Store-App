@@ -11,10 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 const productRouters = require('./routes/productRoutes');
 
 
-
 app.use('/api/products', productRouters);
-
-
 
 
 app.listen(port, () =>
